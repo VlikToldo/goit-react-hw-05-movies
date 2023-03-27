@@ -13,7 +13,7 @@ const Reviews = lazy(() => import('./module/Reviews/Reviews'));
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/your_repo_name">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
