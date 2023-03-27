@@ -13,7 +13,7 @@ const Reviews = lazy(() => import('./module/Reviews/Reviews'));
 
 export const App = () => {
   return (
-    <BrowserRouter basename="/VlikToldo">
+    <BrowserRouter basename="/goit-react-hw-05-movies">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
