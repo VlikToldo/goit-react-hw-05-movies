@@ -1,0 +1,12 @@
+.movieItemS{
+    text-decoration: none;
+    color: #3f51b5;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 500;
+    min-width: 180px;
+
+}
