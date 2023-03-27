@@ -29,7 +29,7 @@ const SearchPage = () => {
       ? setSearchParams({})
       : setSearchParams({ movieName: e.target.value });
   };
-console.log(location);
+
   const elements = itemsFilms.map(item => <SearchPageItem key={item.id} {...item} location={location} />);
 
   return (

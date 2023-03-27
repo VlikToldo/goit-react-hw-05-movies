@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
 
 import style from './home-page-item.module.css'
 
@@ -11,3 +12,9 @@ const PageItem = ({ title, id, location }) => {
 };
 
 export default PageItem;
+
+PageItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  location: PropTypes.object,
+  id: PropTypes.string
+}
