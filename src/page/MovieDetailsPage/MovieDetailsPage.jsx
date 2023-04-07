@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef, Suspense } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
-import { searchDetails } from 'components/shared/services/movie-api';
+import { searchDetails } from '../../shared/services/movie-api';
 
 import style from './movie-details-page.module.css';
 

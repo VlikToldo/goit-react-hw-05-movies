@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { searchReviews } from 'components/shared/services/movie-api';
+import { searchReviews } from '../../shared/services/movie-api';
 
 const Reviews = () => {
   const [infoReviews, setInfoReviews] = useState({});

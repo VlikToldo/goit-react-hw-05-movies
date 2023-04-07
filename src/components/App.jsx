@@ -1,15 +1,15 @@
 import { lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Layout from './module/Layout/Layout';
+import Layout from './Layout/Layout';
 
-const HomePage = lazy(() => import('./page/HomePage/HomePage'));
-const SearchPage = lazy(() => import('./page/SearchPage/SearchPage'));
+const HomePage = lazy(() => import('../page/HomePage/HomePage'));
+const SearchPage = lazy(() => import('../page/SearchPage/SearchPage'));
 const MovieDetailsPage = lazy(() =>
-  import('./page/MovieDetailsPage/MovieDetailsPage')
+  import('../page/MovieDetailsPage/MovieDetailsPage')
 );
-const Cast = lazy(() => import('./module/Cast/Cast'));
-const Reviews = lazy(() => import('./module/Reviews/Reviews'));
+const Cast = lazy(() => import('./Cast/Cast'));
+const Reviews = lazy(() => import('./Reviews/Reviews'));
 
 export const App = () => {
   return (

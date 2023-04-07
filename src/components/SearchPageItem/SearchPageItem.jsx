@@ -16,5 +16,5 @@ export default SearchPageItem;
 SearchPageItem.propTypes = {
   title: PropTypes.string.isRequired,
   location: PropTypes.object,
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
 };

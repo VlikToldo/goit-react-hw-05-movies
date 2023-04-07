@@ -1,13 +1,14 @@
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-import SearchPageItem from '../../module/SearchPageItem/SearchPageItem';
-import { searchFilm } from 'components/shared/services/movie-api';
+import SearchPageItem from '../../components/SearchPageItem/SearchPageItem';
+import { searchFilm } from '../../shared/services/movie-api';
 
 import style from './search-page.module.css';
 
 const SearchPage = () => {
   const [itemsFilms, setItemsFilms] = useState([]);
+  const [nameFilm, setNameFilm] = useState('')
   const [searchParams, setSearchParams] = useSearchParams();
   const movieName = searchParams.get('movieName') ?? '';
   const location = useLocation();
@@ -24,21 +25,26 @@ const SearchPage = () => {
     fetchFilm();
   }, [movieName]);
 
+  const formSubmit = (e) =>{
+    e.preventDefault();
+    nameFilm === ''
+    ? setSearchParams({})
+    : setSearchParams({movieName: nameFilm})
+  }
+
   const updateNameString = e => {
-    e.target.value === ''
-      ? setSearchParams({})
-      : setSearchParams({ movieName: e.target.value });
+    setNameFilm(e.target.value);
   };
 
   const elements = itemsFilms.map(item => <SearchPageItem key={item.id} {...item} location={location} />);
 
   return (
     <div>
-      <form className={style.SearchForm}>
-
+      <form className={style.SearchForm} onSubmit={formSubmit}>
+        <button className={style.searchButton} type="submit">Пошук</button>
         <input
           className={style.SearchFormInput}
-          value={movieName}
+          value={nameFilm}
           onChange={updateNameString}
           type="text"
           autoComplete="off"

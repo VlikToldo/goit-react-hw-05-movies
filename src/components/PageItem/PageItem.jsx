@@ -16,5 +16,5 @@ export default PageItem;
 PageItem.propTypes = {
   title: PropTypes.string.isRequired,
   location: PropTypes.object,
-  id: PropTypes.string
+  id: PropTypes.string.isRequired
 }

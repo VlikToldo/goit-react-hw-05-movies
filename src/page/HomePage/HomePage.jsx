@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import PageItem from '../../module/PageItem/PageItem';
+import PageItem from '../../components/PageItem/PageItem';
 import { searchMovie } from '../../shared/services/movie-api';
 
 // import style from './home-page.module.css'
