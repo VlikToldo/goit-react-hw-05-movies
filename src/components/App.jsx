@@ -13,7 +13,7 @@ const Reviews = lazy(() => import('./Reviews/Reviews'));
 
 export const App = () => {
   return (
-    <BrowserRouter basename="/goit-react-hw-05-movies">
+    <BrowserRouter basename="/movies">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

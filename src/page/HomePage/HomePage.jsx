@@ -3,8 +3,6 @@ import { useLocation } from 'react-router-dom';
 import PageItem from '../../components/PageItem/PageItem';
 import { searchMovie } from '../../shared/services/movie-api';
 
-// import style from './home-page.module.css'
-
 const HomePage = () => {
   const [items, setItems] = useState([]);
   const location = useLocation();
@@ -25,7 +23,11 @@ const HomePage = () => {
     <PageItem key={item.id} {...item} location={location} />
   ));
 
-  return <div><ul>{elements}</ul></div> ;
+  return (
+    <div>
+      <ul>{elements}</ul>
+    </div>
+  );
 };
 
 export default HomePage;
